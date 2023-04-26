@@ -1,0 +1,42 @@
+.not-found {
+  width: 560px;
+  height: 225px;
+  margin-right: -10px; 
+}
+
+.starry-sky {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.notfound-copy {
+  color: #fff;
+  position: fixed;
+  top: 25px;
+  right: 10%;
+  text-align: right;
+}
+
+a {
+  font-weight: 300;
+  color: #fff;
+  border-bottom: 1.5px solid #5581d4;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: 300;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  text-decoration: none;
+}
+
+.all-stars {
+    animation: blinkblink 7s linear infinite;
+}
+
+@keyframes blinkblink {  
+  50% { opacity: 0.1; }
+}
