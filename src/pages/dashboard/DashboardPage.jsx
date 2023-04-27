@@ -195,7 +195,7 @@ const Dashboard = () => {
   },[camposEntrada,camposSaida]);
 
   return (
-    <Box marginLeft="5px" marginRight="10px">
+    <Box marginLeft="5px" marginRight="10px" minWidth={330}>
       <Header title="Controle Financeiro" subtitle="Insira Entradas e Saidas Financeiras" />
 
       <Grid container spacing={1} style={{ borderRadius:"10px", border:"2px ridge", margin:"0px 0px 0px 0px"}} backgroundColor={colors.primary[400]}>

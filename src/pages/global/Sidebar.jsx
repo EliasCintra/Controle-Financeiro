@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import { useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
@@ -12,6 +10,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  
   return (
     <MenuItem
       active={selected === title}
@@ -59,7 +58,6 @@ const Sidebar = () => {
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
             style={{
-              margin: "10px 0 20px 0",
               color: colors.grey[100],
             }}
           >
@@ -76,7 +74,7 @@ const Sidebar = () => {
           </MenuItem>
 
           {!isCollapsed && (
-            <Box mb="25px">
+            <Box mb="20px">
               <Box display="flex" justifyContent="center">
                 <img
                   alt="profile-user"
@@ -85,18 +83,17 @@ const Sidebar = () => {
                   src={`../../assets/logo.png`}
                 />
               </Box>
-              <Box textAlign="left" marginLeft={5}>
-                <Typography variant="h5" color={colors.greenAccent[500]} sx={{ m: "20px 0 0 0" , textDecoration: 'none' }}>
+              <Box textAlign="center">
+                <Typography variant="h5" color={colors.greenAccent[500]} sx={{ m: "20px 0 0 0" }}>
                   Elias Cintra (Admin)
                 </Typography>
               </Box>
             </Box>
           )}
 
-          <Box paddingLeft={isCollapsed ? undefined : "0%"}> 
+          <Box> 
             <Item
               title="Dashboard"
-              fontWeight="bold"
               to="/dashboard"
               icon={<HomeOutlinedIcon/>}
               selected={selected}
