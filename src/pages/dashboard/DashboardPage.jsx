@@ -195,16 +195,16 @@ const Dashboard = () => {
   },[camposEntrada,camposSaida]);
 
   return (
-    <Box marginLeft="15px" marginRight="20px">
+    <Box marginLeft="5px" marginRight="10px">
       <Header title="Controle Financeiro" subtitle="Insira Entradas e Saidas Financeiras" />
 
-      <Grid container spacing={1} style={{ borderRadius:"10px", border:"2px ridge", margin:"10px 5px 5px 0px"}} backgroundColor={colors.primary[400]}>
+      <Grid container spacing={1} style={{ borderRadius:"10px", border:"2px ridge", margin:"0px 0px 0px 0px"}} backgroundColor={colors.primary[400]}>
         <Grid item md={5.9} xs={11.8} marginRight={0.2}>
           <Grid container justifyContent="center" backgroundColor="rgb(154, 232, 215)" padding="5px" borderRadius="5px 5px 0px 0px">
             <Typography fontStyle={{color:"rgb(42, 105, 92)"}} variant="h4" sx={{fontWeight: 'bold'}}> Entradas </Typography>
           </Grid>
 
-          <Grid container justifyContent="space-between" backgroundColor="rgb(226, 247, 242)" padding="5px 15px">
+          <Grid container justifyContent="space-between" backgroundColor="rgb(226, 247, 242)" padding="5px 5px">
             <Typography fontStyle={{color:"rgb(42, 105, 92)"}} variant="h5" sx={{fontWeight: 'bold'}}> Descrição </Typography>
             <Typography fontStyle={{color:"rgb(42, 105, 92)"}} variant="h5" sx={{fontWeight: 'bold'}}> Valor </Typography>
           </Grid>
@@ -214,7 +214,7 @@ const Dashboard = () => {
               <Box>
                 {camposEntrada.map(( propEntrada, id )=>(
                   <div key={ id }>
-                  <Grid container justifyContent="space-between" backgroundColor="white" padding="4px 0px 0px 15px">
+                  <Grid container justifyContent="space-between" backgroundColor="white" padding="4px 0px 0px 5px">
                     <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5"> { propEntrada.labelNameEntrada } </Typography>
                     <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5"> { propEntrada.entradaFormatada }  
                       {<Icon id={ id } onClick={buscarIndiceEntrada} icon="eva:trash-2-fill" style={{ margin:"0px", height:"14px", width:"30px" }}/> }
@@ -228,9 +228,9 @@ const Dashboard = () => {
 
           <Grid>
             {camposEntrada.length > 0 && (
-              <Grid container justifyContent="space-between" backgroundColor="rgb(226, 247, 242)" padding="4px 10px" border="0px 0px 5px 5px">
-                <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h4" sx={{fontWeight: 'bold'}}> Total de entradas: </Typography>
-                <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h4" sx={{fontWeight: 'bold'}}> 
+              <Grid container justifyContent="space-between" backgroundColor="rgb(226, 247, 242)" padding="4px 5px" border="0px 0px 5px 5px">
+                <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5" sx={{fontWeight: 'bold'}}> Total de entradas: </Typography>
+                <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5" sx={{fontWeight: 'bold'}}> 
                   {camposEntrada.map(indiceEntrada => indiceEntrada.valorEntrada).reduce(
                   (prev,curr)=>prev+curr,0).toLocaleString('pt-br',{style:'currency',currency:'BRL'})} 
                 </Typography>
@@ -238,7 +238,7 @@ const Dashboard = () => {
             )}
           </Grid>
 
-          <Grid container justifyContent="space-between" backgroundColor="white" padding="4px 10px" border="0px 0px 5px 5px" borderRadius="0px 0px 5px 5px">
+          <Grid container justifyContent="space-between" backgroundColor="white" padding="4px 5px" border="0px 0px px 5px" borderRadius="0px 0px 5px 5px">
             <input
               type="text" id="input-name-entry" className="dados-new" placeholder="Descrição"
               onChange={ setarNomeEntrada } autoComplete="off"
@@ -257,7 +257,7 @@ const Dashboard = () => {
             <Typography fontStyle={{color:"rgb(42, 105, 92)"}} variant="h4" sx={{fontWeight: 'bold'}}> Saídas </Typography>
           </Grid>
 
-          <Grid container justifyContent="space-between" backgroundColor="rgb(226, 247, 242)" padding="5px 15px">
+          <Grid container justifyContent="space-between" backgroundColor="rgb(226, 247, 242)" padding="5px 5px">
             <Typography fontStyle={{color:"rgb(42, 105, 92)"}} variant="h5" sx={{fontWeight: 'bold'}}> Descrição </Typography>
             <Typography fontStyle={{color:"rgb(42, 105, 92)"}} variant="h5" sx={{fontWeight: 'bold'}}> Valor </Typography>
           </Grid>
@@ -268,7 +268,7 @@ const Dashboard = () => {
               <Box>
                 {camposSaida.map(( propSaida, id )=>(
                   <div key={ id }>
-                    <Grid container justifyContent="space-between" backgroundColor="white" padding="4px 0px 0px 15px">
+                    <Grid container justifyContent="space-between" backgroundColor="white" padding="4px 0px 0px 5px">
                       <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5"> { propSaida.labelNameSaida } </Typography>
                       <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5"> { propSaida.saidaFormatada } 
                         {<Icon id={ id } onClick={buscarIndiceSaida} icon="eva:trash-2-fill" style={{ margin:"0px", height:"14px", width:"30px" }}/> }
@@ -282,9 +282,9 @@ const Dashboard = () => {
 
           <Grid>
             {camposSaida.length > 0 && (
-              <Grid container justifyContent="space-between" backgroundColor="rgb(226, 247, 242)" padding="4px 10px" border="0px 0px 5px 5px">
-                <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h4" sx={{fontWeight: 'bold'}}> Total de saídas:</Typography>
-                <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h4" sx={{fontWeight: 'bold'}}> 
+              <Grid container justifyContent="space-between" backgroundColor="rgb(226, 247, 242)" padding="4px 5px" border="0px 0px 5px 5px">
+                <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5" sx={{fontWeight: 'bold'}}> Total de saídas:</Typography>
+                <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5" sx={{fontWeight: 'bold'}}> 
                   {camposSaida.map(indiceSaida => indiceSaida.valorSaida).reduce(
                     (prev,curr)=>prev+curr,0).toLocaleString('pt-br',{style:'currency',currency:'BRL'})} 
                 </Typography>
@@ -292,7 +292,7 @@ const Dashboard = () => {
             )}
           </Grid>
 
-          <Grid container justifyContent="space-between" backgroundColor="white" padding="4px 10px" border="0px 0px 5px 5px" borderRadius="0px 0px 5px 5px">
+          <Grid container justifyContent="space-between" backgroundColor="white" padding="4px 5px" border="0px 0px 5px 5px" borderRadius="0px 0px 5px 5px">
             <input
               type="text" id="input-name-output" className="dados-new" placeholder="Descrição"
               onChange={ setarNomeSaida } autoComplete="off"

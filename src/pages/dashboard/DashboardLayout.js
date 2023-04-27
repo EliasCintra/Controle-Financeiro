@@ -4,13 +4,13 @@ import { useState } from "react";
 import Dashboard from "./DashboardPage";
 
 export default function LayoutDashboard (){
-  const [isSidebar, setIsSidebar] = useState(true);
+  const [isSidebar, setIsSidebar] = useState(false);
 
   return (
       <div className="app">
-        <Sidebar isSidebar={isSidebar} />
+        <Sidebar isSidebar={isSidebar} /> 
         <main className="content">
-          <Topbar setIsSidebar={setIsSidebar} />
+          <Topbar setIsSidebar={setIsSidebar}/>
           <Dashboard/>
         </main>
       </div>

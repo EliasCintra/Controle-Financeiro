@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import LogoutIcon from '@mui/icons-material/Logout';
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -31,7 +30,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [selected, setSelected] = useState("Dashboard");
 
   return (
@@ -86,7 +85,7 @@ const Sidebar = () => {
                   src={`../../assets/logo.png`}
                 />
               </Box>
-              <Box textAlign="center">
+              <Box textAlign="left" marginLeft={5}>
                 <Typography variant="h5" color={colors.greenAccent[500]} sx={{ m: "20px 0 0 0" , textDecoration: 'none' }}>
                   Elias Cintra (Admin)
                 </Typography>
@@ -99,7 +98,7 @@ const Sidebar = () => {
               title="Dashboard"
               fontWeight="bold"
               to="/dashboard"
-              icon={<HomeOutlinedIcon />}
+              icon={<HomeOutlinedIcon/>}
               selected={selected}
               setSelected={setSelected}
             />
