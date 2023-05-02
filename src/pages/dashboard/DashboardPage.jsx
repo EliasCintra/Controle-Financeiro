@@ -207,8 +207,6 @@ const Dashboard = () => {
           <Grid container justifyContent="space-between" backgroundColor="rgb(226, 247, 242)" padding="5px 5px">
             <Typography fontStyle={{color:"rgb(42, 105, 92)"}} variant="h5" sx={{fontWeight: 'bold'}}> Descrição </Typography>
             <Typography fontStyle={{color:"rgb(42, 105, 92)"}} variant="h5" sx={{fontWeight: 'bold'}}> Valor </Typography>
-            <Typography fontStyle={{color:"rgb(42, 105, 92)"}} variant="h5" sx={{fontWeight: 'bold'}}> Excluir </Typography>
-
           </Grid>
 
           <fieldset className="fieldset-condition" id="fieldset-entry">
@@ -218,9 +216,8 @@ const Dashboard = () => {
                   <div key={ id }>
                   <Grid container justifyContent="space-between" backgroundColor="white" padding="4px 0px 0px 5px">
                     <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5"> { propEntrada.labelNameEntrada } </Typography>
-                    <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5"> { propEntrada.entradaFormatada }  </Typography>
-                    <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5">
-                      {<Icon id={ id } onClick={buscarIndiceEntrada} icon="eva:trash-2-fill" style={{ margin:"0px", height:"20px", width:"30px" }}/> }
+                    <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5"> { propEntrada.entradaFormatada } 
+                      {<Icon id={ id } onClick={buscarIndiceEntrada} icon="eva:trash-2-fill" style={{ margin:"0px", height:"15px", width:"30px" }}/> }
                     </Typography>
                   </Grid>
                 </div>
@@ -263,8 +260,6 @@ const Dashboard = () => {
           <Grid container justifyContent="space-between" backgroundColor="rgb(226, 247, 242)" padding="5px 5px">
             <Typography fontStyle={{color:"rgb(42, 105, 92)"}} variant="h5" sx={{fontWeight: 'bold'}}> Descrição </Typography>
             <Typography fontStyle={{color:"rgb(42, 105, 92)"}} variant="h5" sx={{fontWeight: 'bold'}}> Valor </Typography>
-            <Typography fontStyle={{color:"rgb(42, 105, 92)"}} variant="h5" sx={{fontWeight: 'bold'}}> Excluir </Typography>
-
           </Grid>
           
           
@@ -275,9 +270,8 @@ const Dashboard = () => {
                   <div key={ id }>
                     <Grid container justifyContent="space-between" backgroundColor="white" padding="4px 0px 0px 5px">
                       <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5"> { propSaida.labelNameSaida } </Typography>
-                      <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5"> { propSaida.saidaFormatada } </Typography>
-                      <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5">
-                        {<Icon id={ id } onClick={buscarIndiceSaida} icon="eva:trash-2-fill" style={{ margin:"0px", height:"20px", width:"30px" }}/> }
+                      <Typography fontStyle={{color:"rgb(74, 142, 129)"}} variant="h5"> { propSaida.saidaFormatada }
+                        {<Icon id={ id } onClick={buscarIndiceSaida} icon="eva:trash-2-fill" style={{ margin:"0px", height:"15px", width:"30px" }}/> }
                       </Typography>
                     </Grid>
                   </div>
